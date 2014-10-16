@@ -61,7 +61,7 @@ RUN curl -kLO http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binari
 ENV PATH ${JAVA_HOME}/bin:${MAVEN_HOME}/bin:${PATH}
 
 RUN mkdir .ssh
-ADD ./private_key .ssh/id_rsa
+#ADD ./private_key .ssh/id_rsa
 ADD ./ssh-git.sh ssh-git.sh
 RUN chmod 744 ssh-git.sh && export GIT_SSH=~/ssh-git.sh
 
